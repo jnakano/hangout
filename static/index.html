@@ -1,5 +1,28 @@
+<!DOCTYPE html>
 <html>
-    <body>
-        {{ moon }}
-    </body>
+  <head>
+  
+  <link rel="stylesheet" type="text/css" href="style.css" > 
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDhBv45LIq7gUgdtjTWc3lyIkMxBeiLzJU&sensor=true">
+    </script>
+    
+    
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 11,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas"></div>
+  </body>
 </html>
