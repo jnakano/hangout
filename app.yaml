@@ -1,4 +1,4 @@
-application: hangout
+application: wannahangout123
 version: 1
 runtime: python27
 api_version: 1
@@ -12,6 +12,14 @@ handlers:
 - url: .*
   script: main.app
 
+- url: /static/(.*\.(gif|png|jpg))
+  static_files: static/\1
+  upload: static/(.*\.(gif|png|jpg))
+
 libraries:
 - name: webapp2
   version: "2.5.1"
+
+- name: jinja2
+  version: "2.6"
+
