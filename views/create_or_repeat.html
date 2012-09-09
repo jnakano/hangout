@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+create or repeat an event?
+
+<label name="lbl_create">Create</label>
+<input type="checkbox" name="create" label="lbl_create" checked />
+
+<label name="lbl_repeat">Repeat</label>
+<input type="checkbox" name="repeat" label="lbl_repeat" />
+
+<a href="javascript:void(0)" id="btn_continue">Continue</a>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+  function initialize()
+  {
+    $("#btn_continue").click(function(e){
+      top.location.href = '/'
+    });
+  }
+</script>
+{% endblock %}

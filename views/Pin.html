@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <link rel="stylesheet" type="text/css" href="style.css" > 
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDhBv45LIq7gUgdtjTWc3lyIkMxBeiLzJU&sensor=true">
+    </script>
+    <style>
+    
+    h1{
+    	font-size: 40px;
+    	color: green;
+    	font-family: Tahoma, sans-serif;
+    	text-align: center;
+    }
+    
+    h3{
+    	font-size: 20px;
+    	color: green;
+    	font-family: Tahoma, sans-serif;
+    	text-align: center;
+    }	
+    
+    button{
+    width: 150px;
+    height:  60px;
+    background-color: blue;
+    }
+    
+    #repeat{
+    
+    	
+    }
+    	
+    #container{
+    	margin-left: 10px;
+    	position: relative;
+    }
+    
+    #navigation {font-size:0.75em; width:150px;}
+    #navigation ul {margin:0px; padding:0px;}
+    #navigation li {list-style: none;}
+    
+    ul.top-level {background:#666;}
+    ul.top-level li {
+     border-bottom: #fff solid;
+     border-top: #fff solid;
+     border-width: 1px;
+    }
+    
+    #navigation{
+    	margin-left: 10px;
+    }
+    
+    #navigation a {
+     color: #fff;
+     cursor: pointer;
+     display:block;
+     height:25px;
+     line-height: 25px;
+     text-indent: 10px;                   
+     text-decoration:none;
+     width:100%;
+    }
+    #navigation a:hover{
+     text-decoration:underline;
+    }
+    
+    #pin_direction{
+    	text-align: center;
+    	color: green;
+    	font-family: Tahoma, sans-serif;
+    }
+    </style>
+    
+    
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+  
+  <h1> Pin a hang out </h1>
+  
+  <div id="pin_direction">
+  
+  	Tap a location on the map to pin
+  </div>
+    <div id="map_canvas"></div>
+  </body>
+</html>
