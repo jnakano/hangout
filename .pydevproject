@@ -11,4 +11,7 @@
 <path>/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/yaml/lib/yaml</path>
 <path>/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine</path>
 </pydev_pathproperty>
+<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+<path>/hangout</path>
+</pydev_pathproperty>
 </pydev_project>
