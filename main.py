@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
+import os
 import webapp2
 import jinja2
-import os
 from google.appengine.ext import db
 
 assets_path = os.path.join(os.path.dirname(__file__), 'static')
@@ -15,6 +15,11 @@ class User(db.Expando):
   email = db.StringProperty()
   event = db.StringProperty()
   name = db.StringProperty()
+
+class BaseHandler(webapp2.RequestHandler):
+  def get(self):
+    pass
+
 
 class MainHandler(webapp2.RequestHandler):
   def get(self):
