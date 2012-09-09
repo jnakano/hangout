@@ -16,17 +16,17 @@ class User(db.Expando):
   event = db.StringProperty()
   name = db.StringProperty()
 
-class BaseHandler(webapp2.RequestHandler):
+class MapHandler(webapp2.RequestHandler):
   def get(self):
-    pass
-
+    template = jinja_environment.get_template("map.html")
+    self.response.out.write(template.render({
+        "moon":55
+      }))
 
 class MainHandler(webapp2.RequestHandler):
   def get(self):
     template = jinja_environment.get_template("index.html")
-    self.response.out.write(template.render({
-        "moon":55
-      }))
+    self.response.out.write(template.render({}))
 
 class LocationHandler(webapp2.RequestHandler):
   def get(self):
@@ -34,5 +34,6 @@ class LocationHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication(
   [('/', MainHandler),
+    ('/', MapHandler),
     ('/lh', LocationHandler)
     ], debug = True)
